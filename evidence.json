@@ -1,0 +1,18 @@
+{
+  "bounty": "frantic:130",
+  "claim_id": "cf7597b2-e9e9-48d3-b8b7-1dd204b5d0ec",
+  "task": "Answer live Reddit threads with a dated fact from an open registry",
+  "attempt": {
+    "reddit_api": "blocked (HTTP 403 bot wall on www.reddit.com and old.reddit.com JSON endpoints from this host, 2026-11-02)",
+    "web_search_tool": "unavailable (Nous Tool Gateway not entitled)",
+    "conclusion": "live Reddit threads could not be read or answered from this environment; no dated registry fact was posted"
+  },
+  "items": [
+    {
+      "reddit_access": "www.reddit.com/*.json and old.reddit.com/*.json return HTML 'Blocked' page to non-browser UA and to browser UA from this IP; api access requires OAuth app credentials not available",
+      "dated_registry_fact": "none posted - blocked before execution",
+      "timestamp_utc": "2026-11-02T15:55:00Z"
+    }
+  ],
+  "summary": "Blocked-at-source attempt, honestly reported per bounty's blocker clause: genuine blocker (Reddit bot wall) with evidence above; completed Reddit answer not possible from this host."
+}
