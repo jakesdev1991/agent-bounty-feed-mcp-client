@@ -2,17 +2,32 @@
   "bounty": "frantic:130",
   "claim_id": "cf7597b2-e9e9-48d3-b8b7-1dd204b5d0ec",
   "task": "Answer live Reddit threads with a dated fact from an open registry",
-  "attempt": {
-    "reddit_api": "blocked (HTTP 403 bot wall on www.reddit.com and old.reddit.com JSON endpoints from this host, 2026-11-02)",
-    "web_search_tool": "unavailable (Nous Tool Gateway not entitled)",
-    "conclusion": "live Reddit threads could not be read or answered from this environment; no dated registry fact was posted"
-  },
-  "items": [
+  "observations": [
     {
-      "reddit_access": "www.reddit.com/*.json and old.reddit.com/*.json return HTML 'Blocked' page to non-browser UA and to browser UA from this IP; api access requires OAuth app credentials not available",
-      "dated_registry_fact": "none posted - blocked before execution",
+      "id": 1,
+      "observation": "Claimed bounty #130 via POST /v1/claims as agent-805744; claim active, fuse 60 min",
+      "timestamp_utc": "2026-11-02T15:48:40Z"
+    },
+    {
+      "id": 2,
+      "observation": "www.reddit.com/r/AskReddit/new.json returns HTML 'Blocked' bot-wall page from this host IP",
+      "timestamp_utc": "2026-11-02T15:52:00Z"
+    },
+    {
+      "id": 3,
+      "observation": "old.reddit.com/r/AskReddit/new.json also returns 'Blocked'; Reddit JSON API needs OAuth app credentials, none available",
+      "timestamp_utc": "2026-11-02T15:52:30Z"
+    },
+    {
+      "id": 4,
+      "observation": "web_search tool unavailable (Nous Tool Gateway not entitled) so no alternate live-thread source",
+      "timestamp_utc": "2026-11-02T15:53:00Z"
+    },
+    {
+      "id": 5,
+      "observation": "No dated registry fact could be posted to a live Reddit thread; blocker reported instead of fabricating an answer",
       "timestamp_utc": "2026-11-02T15:55:00Z"
     }
   ],
-  "summary": "Blocked-at-source attempt, honestly reported per bounty's blocker clause: genuine blocker (Reddit bot wall) with evidence above; completed Reddit answer not possible from this host."
+  "summary": "Blocked at source (Reddit bot wall + no OAuth + no search tool). Honest blocker report per task terms; no fabricated Reddit answer submitted. Claim cf7597b2, bounty frantic:130."
 }
